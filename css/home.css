@@ -1,0 +1,814 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* 로보토 폰트 적용 */
+}
+
+/* header 스타일 */
+header {
+    display: flex;
+    flex-direction: column;
+    /* 세로로 배치 */
+    justify-content: center;
+    /* 세로로 가운데 정렬 */
+    align-items: center;
+    /* 가로로 가운데 정렬 */
+    padding: 20px 20px;
+    background-color: white;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 로고 스타일 */
+.logo img {
+    height: 90px;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: center;
+    /* 네비게이션 메뉴 중앙 정렬 */
+    width: 100%;
+    /* 네비게이션 바가 전체 폭을 차지하도록 설정 */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* 메뉴 항목을 중앙 정렬 */
+    margin: 0;
+    margin-top: 30px;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    color: #777;
+}
+
+.navbar>ul>li.current>a {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+/* 메인 이미지 스타일링 */
+.main-image img {
+    width: 100%;
+    /* 이미지가 부모 컨테이너의 100%를 차지 */
+    height: auto;
+    /* 이미지 비율 유지 */
+    object-fit: cover;
+    /* 화면에 꽉 차게 이미지 자르기 */
+}
+
+/* YouTube iframe 중앙 정렬 */
+.v-section {
+    display: flex;
+    justify-content: center;
+    /* iframe을 수평 중앙 정렬 */
+    align-items: center;
+    /* iframe을 수직 중앙 정렬 */
+    margin-top: 80px;
+    /* 모바일에서는 영상과 이미지 간 간격을 줄임 */
+}
+
+.v-section iframe {
+    max-width: 90%;
+    /* 화면 크기에 맞게 크기 조정 */
+    width: 80%;
+    /* 모바일에서 화면 크기에 맞게 크기 조정 */
+    height: 550px;
+    /* 모바일 화면에서는 작은 크기로 설정 */
+}
+
+/* On-broad 스타일링 */
+#on-broad-div,
+#robot-hand-div {
+    display: flex;
+    flex-direction: row;
+    /* 이미지와 텍스트를 가로로 배치 */
+    justify-content: flex-start;
+    align-items: center;
+    /* 세로로 가운데 정렬 */
+    max-width: 90%;
+    /* 화면 크기에 맞게 크기 조정 */
+    width: 80%;
+    /* 모바일에서 화면 크기에 맞게 크기 조정 */
+    margin-top: 40px;
+}
+
+#on-broad-img {
+    width: 1100px;
+    height: auto;
+    margin-right: 20px;
+    /* 이미지와 텍스트 사이에 간격 추가 */
+}
+
+#on-broad-comment {
+    max-width: 60%;
+    /* 텍스트 영역이 너무 커지지 않도록 설정 */
+}
+
+#on-broad-comment h1 {
+    font-size: 43px;
+    margin-bottom: 20px;
+}
+
+#on-broad-comment ul li {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+#on-broad-comment img {
+    width: 49%;
+    margin-top: 20px;
+    height: auto;
+}
+
+/* Robot Hand 스타일링 */
+#robot-hand-comment p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#robot-hand-comment h1 {
+    font-size: 43px;
+    margin-bottom: 20px;
+}
+
+#robot-hand-comment ul li {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+#robot-hand-img {
+    width: 700px;
+}
+
+/* High-Performance 스타일링 */
+#high-performance-div {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* 세로로 배치 */
+    align-items: center;
+    /* 이미지와 텍스트가 중앙 정렬되도록 설정 */
+}
+
+#high-performance-div h1 {
+    font-size: 43px;
+    margin-bottom: 20px;
+}
+
+#high-performance-div img {
+    margin-top: 50px;
+    width: 90%;
+    /* 이미지 크기를 부모의 100%로 설정 */
+    height: auto;
+}
+
+/* Haptic Measurement 스타일링 */
+#haptic-measurement {
+    max-width: 90%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#haptic-measurement h1 {
+    font-size: 43px;
+}
+
+#haptic-measurement-pTag {
+    font-size: 20px;
+}
+
+.measurement-container {
+    display: flex;
+    justify-content: center;
+    /* 아이템을 가로로 중앙 정렬 */
+    align-items: center;
+    /* 아이템을 세로로 중앙 정렬 */
+    flex-wrap: wrap;
+    /* 화면에 맞게 아이템이 다음 줄로 넘어가도록 설정 */
+    margin-top: 40px;
+}
+
+.measurement-item {
+    display: flex;
+    flex-direction: column;
+    /* 이미지와 텍스트를 세로로 배치 */
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    /* 아이템 간의 간격을 추가 */
+}
+
+.measurement-item p{
+    font-size: 20px;
+}
+
+#data-acquisition-imgDiv,
+#analysis-imgDiv,
+#signal-imgDiv,
+#data-management-imgDiv,
+#visualization-imgDiv {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    /* 이미지 아래에 여백을 추가 */
+    border: 1px solid;
+}
+
+#data-acquisition-img,
+#analysis-img,
+#signal-img,
+#data-management-img,
+#visualization-img {
+    width: 150px;
+    height: auto;
+}
+
+#partners-h1-div {
+    width: 100%; /* 부모 컨테이너의 너비에 맞게 설정 */
+    text-align: center; /* "Partners" 텍스트를 중앙 정렬 */
+    margin-bottom: 20px; /* 헤딩과 이미지 사이 간격 추가 */
+    margin-top: 50px;
+}
+#partners-h1-div h1{
+    font-size: 43px;
+}
+
+#partners-img-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* PC에서는 한 줄에 4개의 이미지 배치 */
+    gap: 10px; /* 이미지 간 간격을 줄임 */
+    justify-items: center; /* 각 이미지 가로 중앙 정렬 */
+    width: 70%; /* 이미지 컨테이너의 너비를 80%로 설정 */
+    margin: 100px auto; /* 좌우 여백을 자동으로 설정하여 중앙 정렬 */
+}
+
+#partners-img-div img {
+    width: 100%;
+    max-width: 100%; /* 이미지는 부모의 크기에 맞게 반응형으로 설정 */
+    height: auto; /* 이미지 비율을 유지하면서 크기 조정 */
+    margin: 0; /* 이미지 간 여백을 제거 */
+    border: 1px solid #99999999;
+}
+#partners-img-div img:hover{
+	cursor: pointer;
+	filter: brightness(0.5);
+}
+
+footer {
+    background-color: #777; /* 배경색 */
+    color: white; /* 글자 색 */
+    padding: 20px;
+    text-align: center; /* 중앙 정렬 */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.footer-info p,
+.footer-address p,
+.footer-contact p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+footer strong {
+    font-weight: bold;
+}
+
+
+
+
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .v-section iframe {
+        width: 100%;
+        /* 화면 크기에 맞게 크기 조정 */
+        height: 350px;
+        /* 조금 더 높은 높이로 설정 */
+        margin-top: -40px;
+        /* 모바일에서는 영상 간격을 더 줄임 */
+    }
+
+    #on-broad-img {
+        width: 100%;
+        /* 화면 크기에 맞게 크기 조정 */
+        margin-top: -40px;
+        /* 모바일에서는 영상 간격을 더 줄임 */
+    }
+
+    #on-broad-div {
+        flex-direction: column;
+        /* 모바일에서는 이미지와 텍스트를 세로로 배치 */
+        align-items: flex-start;
+        /* 세로로 배치 시 왼쪽 정렬 */
+        text-align: left;
+        /* 텍스트 왼쪽 정렬 */
+    }
+
+    #on-broad-comment {
+        max-width: 100%;
+        /* 텍스트 영역 크기 조정 */
+    }
+
+    #on-broad-comment h1 {
+        font-size: 23px;
+    }
+
+    #on-broad-comment ul li {
+        margin-left: 25px;
+        font-size: 17px;
+    }
+
+    #robot-hand-div {
+        flex-direction: column;
+        /* Change to column layout on mobile */
+        align-items: flex-start;
+        /* Align items to the left */
+        margin-top: 0px;
+        /* Add space between sections */
+    }
+
+    #robot-hand-comment {
+        max-width: 100%;
+        /* Full width for mobile */
+        text-align: left;
+    }
+
+    #robot-hand-comment p {
+        font-size: 17px;
+    }
+
+    #robot-hand-comment h1 {
+        font-size: 23px;
+        /* Adjust heading font size */
+    }
+
+    #robot-hand-comment ul li {
+        font-size: 15px;
+        /* Adjust font size for list items */
+    }
+
+    #robot-hand-img {
+        width: 100%;
+        /* Make the image responsive */
+        margin-top: 20px;
+        /* Add space between the list and image */
+    }
+
+    #high-performance-div h1 {
+        font-size: 23px;
+        margin-bottom: 5px;
+    }
+
+    /* 이미지 크기 및 정렬 수정 */
+    #data-acquisition-imgDiv,
+    #analysis-imgDiv,
+    #signal-imgDiv,
+    #data-management-imgDiv,
+    #visualization-imgDiv {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        /* Flexbox로 정렬 */
+        justify-content: center;
+        /* 중앙 정렬 */
+        align-items: center;
+        /* 세로 중앙 정렬 */
+        margin: 10px;
+        /* 이미지들 간의 간격 추가 */
+    }
+
+    #data-acquisition-img,
+    #analysis-img,
+    #signal-img,
+    #data-management-img,
+    #visualization-img {
+        width: 150px;
+        height: auto;
+    }
+
+    /* .measurement-container가 가로로 정렬되도록 추가 */
+    .measurement-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 화면 크기에 따라 아이템을 여러 줄로 배치 */
+        margin-top: 0px;
+    }
+
+    .measurement-item {
+        display: flex;
+        flex-direction: column;
+        /* 이미지와 텍스트를 세로로 배치 */
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        /* 아이템 간격을 추가 */
+    }
+
+    .measurement-item p {
+        font-size: 16px;
+    }
+
+    #haptic-measurement h1 {
+        font-size: 23px;
+    }
+
+    #haptic-measurement-pTag {
+        font-size: 16px;
+    }
+    footer p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 0;
+        /* 모바일에서는 로고를 중앙에 배치 */
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin-left: 10px;
+    }
+
+    /* 모바일에서 .current 링크의 text-underline-offset 값 줄이기 */
+    .navbar>ul>li.current>a {
+        text-underline-offset: 8px;
+        /* 모바일에서는 8px로 줄임 */
+    }
+
+    .v-section iframe {
+        width: 100%;
+        /* 화면 크기에 맞게 영상 크기 조정 */
+        height: 300px;
+        /* 조금 더 작은 높이로 설정 */
+        margin-top: -40px;
+        /* 모바일에서는 영상 간격을 더 줄임 */
+    }
+
+    #on-broad-img {
+        width: 100%;
+        /* 화면 크기에 맞게 크기 조정 */
+    }
+
+    #on-broad-comment {
+        max-width: 100%;
+        /* 모바일에서는 텍스트 영역이 전체 너비를 차지하도록 설정 */
+    }
+
+    #on-broad-comment h1 {
+        font-size: 20px;
+    }
+
+    #on-broad-comment ul li {
+        margin-left: 22px;
+        font-size: 15px;
+    }
+
+    #on-broad-comment img {
+        width: 49%;
+    }
+
+    #robot-hand-div {
+        flex-direction: column;
+        /* Change to column layout on mobile */
+        align-items: flex-start;
+        /* Align items to the left */
+    }
+
+    #robot-hand-comment {
+        max-width: 100%;
+        /* Full width for mobile */
+        text-align: left;
+    }
+
+    #robot-hand-comment p {
+        font-size: 15px;
+    }
+
+    #robot-hand-comment h1 {
+        font-size: 20px;
+        /* Adjust heading font size */
+    }
+
+    #robot-hand-comment ul li {
+        font-size: 13px;
+        /* Adjust font size for list items */
+    }
+
+    #robot-hand-img {
+        width: 100%;
+        /* Make the image responsive */
+        margin-top: 20px;
+        /* Add space between the list and image */
+    }
+
+    #high-performance-div h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    /* 이미지 크기 및 정렬 수정 */
+    #data-acquisition-imgDiv,
+    #analysis-imgDiv,
+    #signal-imgDiv,
+    #data-management-imgDiv,
+    #visualization-imgDiv {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        /* Flexbox로 정렬 */
+        justify-content: center;
+        /* 중앙 정렬 */
+        align-items: center;
+        /* 세로 중앙 정렬 */
+        margin: 10px;
+        /* 이미지들 간의 간격 추가 */
+    }
+
+    #data-acquisition-img,
+    #analysis-img,
+    #signal-img,
+    #data-management-img,
+    #visualization-img {
+        width: 100px;
+        height: auto;
+    }
+
+    /* .measurement-container가 가로로 정렬되도록 추가 */
+    .measurement-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 화면 크기에 따라 아이템을 여러 줄로 배치 */
+        margin-top: 30px;
+    }
+
+    .measurement-item {
+        display: flex;
+        flex-direction: column;
+        /* 이미지와 텍스트를 세로로 배치 */
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        /* 아이템 간격을 추가 */
+    }
+
+    .measurement-item p {
+        font-size: 13px;
+    }
+
+    #haptic-measurement h1 {
+        font-size: 20px;
+    }
+
+    #haptic-measurement-pTag {
+        font-size: 13px;
+    }
+    #partners-img-div{
+        margin-top: 40px;
+    }
+    #partners-h1-div h1{
+        font-size: 20px;
+    }
+    footer p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+        padding: 12px 0;
+    }
+
+    /* 더 작은 화면에서 .current 링크의 text-underline-offset 값 줄이기 */
+    .navbar>ul>li.current>a {
+        text-underline-offset: 6px;
+        /* 더 작은 화면에서는 6px로 줄임 */
+    }
+
+    .v-section iframe {
+        width: 100%;
+        /* 화면 크기에 맞게 크기 조정 */
+        height: 200px;
+        /* 더 작은 높이로 설정 */
+        margin-top: -40px;
+        /* 모바일에서는 영상 간격을 더 줄임 */
+    }
+
+    #on-broad-img {
+        width: 100%;
+        /* 화면 크기에 맞게 크기 조정 */
+    }
+
+    #on-broad-div {
+        margin-top: 0px;
+        /* 모바일에서는 영상 간격을 더 줄임 */
+    }
+
+    #on-broad-comment {
+        max-width: 100%;
+        /* 모바일에서는 텍스트 영역이 전체 너비를 차지하도록 설정 */
+    }
+
+    #on-broad-comment h1 {
+        font-size: 14px;
+    }
+
+    #on-broad-comment ul li {
+        margin-left: 20px;
+        font-size: 8px;
+    }
+
+    #on-broad-comment img {
+        width: 49%;
+    }
+
+    #robot-hand-div {
+        flex-direction: column;
+        /* Change to column layout on mobile */
+        align-items: flex-start;
+        /* Align items to the left */
+        margin-top: -40px;
+        /* Add space between sections */
+    }
+
+    #robot-hand-comment {
+        max-width: 100%;
+        /* Full width for mobile */
+        text-align: left;
+    }
+
+    #robot-hand-comment p {
+        font-size: 10px;
+    }
+
+    #robot-hand-comment h1 {
+        font-size: 20px;
+        /* Adjust heading font size */
+    }
+
+    #robot-hand-comment ul li {
+        font-size: 10px;
+        /* Adjust font size for list items */
+    }
+
+    #robot-hand-img {
+        width: 100%;
+        /* Make the image responsive */
+        margin-top: 20px;
+        /* Add space between the list and image */
+    }
+
+    #high-performance-div {
+        margin-top: 0px;
+    }
+
+    #high-performance-div h1 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    /* 이미지 크기 및 정렬 수정 */
+    #data-acquisition-imgDiv,
+    #analysis-imgDiv,
+    #signal-imgDiv,
+    #data-management-imgDiv,
+    #visualization-imgDiv {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        /* Flexbox로 정렬 */
+        justify-content: center;
+        /* 중앙 정렬 */
+        align-items: center;
+        /* 세로 중앙 정렬 */
+        margin: 10px;
+        /* 이미지들 간의 간격 추가 */
+    }
+
+    #data-acquisition-img,
+    #analysis-img,
+    #signal-img,
+    #data-management-img,
+    #visualization-img {
+        width: 50px;
+        height: auto;
+    }
+
+    /* .measurement-container가 가로로 정렬되도록 추가 */
+    .measurement-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 화면 크기에 따라 아이템을 여러 줄로 배치 */
+    }
+
+    .measurement-item {
+        display: flex;
+        flex-direction: column;
+        /* 이미지와 텍스트를 세로로 배치 */
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        /* 아이템 간격을 추가 */
+    }
+
+    .measurement-item p {
+        font-size: 10px;
+    }
+    #haptic-measurement{
+        margin-top: 0px;   
+    }
+
+    #haptic-measurement h1 {
+        font-size: 15px;
+    }
+
+    #haptic-measurement-pTag {
+        font-size: 10px;
+    }
+    #partners-h1-div{
+        margin-top: 0px;
+    }
+    #partners-img-div{
+        margin-top: 30px;
+    }
+    #partners-h1-div h1{
+        font-size: 15px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+}

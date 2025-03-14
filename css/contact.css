@@ -1,0 +1,235 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* 로보토 폰트 적용 */
+}
+
+/* header 스타일 */
+header {
+    display: flex;
+    flex-direction: column; /* 세로로 배치 */
+    justify-content: center; /* 세로로 가운데 정렬 */
+    align-items: center; /* 가로로 가운데 정렬 */
+    padding: 20px 20px;
+    background-color: white;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 로고 스타일 */
+.logo img {
+    height: 90px;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: center; /* 네비게이션 메뉴 중앙 정렬 */
+    width: 100%; /* 네비게이션 바가 전체 폭을 차지하도록 설정 */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 메뉴 항목을 중앙 정렬 */
+    margin: 0;
+    margin-top: 30px;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    color: #777;
+}
+
+.navbar > ul > li.current > a {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+footer {
+    background-color: #777; /* 배경색 */
+    color: white; /* 글자 색 */
+    padding: 20px;
+    text-align: center; /* 중앙 정렬 */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.footer-info p,
+.footer-address p,
+.footer-contact p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+footer strong {
+    font-weight: bold;
+}
+
+.v-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-div {
+    margin: 100px auto;
+    text-align: center;
+    width: 70%; /* 컨텐츠 영역의 크기 */
+}
+
+#contact-div h1 {
+    font-size: 43px;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between; /* Ensures space between items */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px; /* Adds space between the images */
+    margin: 100px auto;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%; /* Adjust width of each item to fit 4 items per row */
+}
+
+.image-item img {
+    max-width: 80%; /* Ensures images are responsive */
+    height: auto;
+}
+
+.image-item p {
+    margin-top: 10px; /* Adds spacing between image and text */
+    font-weight: bold;
+}
+#location iframe{
+    width: 100%;
+}
+
+
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+    .images-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items */
+    }
+
+    .image-item {
+        width: 100%; /* Full width for each item */
+        margin-bottom: 20px; /* Adds space between stacked items */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 0; /* 모바일에서는 로고를 중앙에 배치 */
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin-left: 10px;
+    }
+
+    /* 모바일에서 .current 링크의 text-underline-offset 값 줄이기 */
+    .navbar > ul > li.current > a {
+        text-underline-offset: 8px; /* 모바일에서는 8px로 줄임 */
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+    .images-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items */
+    }
+
+    .image-item {
+        width: 100%; /* Full width for each item */
+        margin-bottom: 20px; /* Adds space between stacked items */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+        padding: 12px 0;
+    }
+
+    /* 더 작은 화면에서 .current 링크의 text-underline-offset 값 줄이기 */
+    .navbar > ul > li.current > a {
+        text-underline-offset: 6px; /* 더 작은 화면에서는 6px로 줄임 */
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .images-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items */
+    }
+
+    .image-item {
+        width: 100%; /* Full width for each item */
+        margin-bottom: 20px; /* Adds space between stacked items */
+    }
+}

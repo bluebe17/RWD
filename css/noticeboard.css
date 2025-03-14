@@ -1,0 +1,256 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* 로보토 폰트 적용 */
+}
+
+/* header 스타일 */
+header {
+    display: flex;
+    flex-direction: column;
+    /* 세로로 배치 */
+    justify-content: center;
+    /* 세로로 가운데 정렬 */
+    align-items: center;
+    /* 가로로 가운데 정렬 */
+    padding: 20px 20px;
+    background-color: white;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 로고 스타일 */
+.logo img {
+    height: 90px;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: center;
+    /* 네비게이션 메뉴 중앙 정렬 */
+    width: 100%;
+    /* 네비게이션 바가 전체 폭을 차지하도록 설정 */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* 메뉴 항목을 중앙 정렬 */
+    margin: 0;
+    margin-top: 30px;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    color: #777;
+}
+
+.navbar>ul>li.current>a {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+footer {
+    background-color: #777; /* 배경색 */
+    color: white; /* 글자 색 */
+    padding: 20px;
+    text-align: center; /* 중앙 정렬 */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.footer-info p,
+.footer-address p,
+.footer-contact p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+footer strong {
+    font-weight: bold;
+}
+.v-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* 90%로 너비 조정, 필요에 따라 값을 조정 */
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+#noticeboard-div {
+    margin: 100px auto;
+    text-align: center;
+    width: 100%; /* 100%로 전체 너비 사용 */
+    max-width: 1200px; /* 최대 너비를 설정하여 너무 넓어지지 않도록 제한 */
+}
+
+#noticeboard-div h1 {
+    font-size: 43px;
+    margin-bottom: 20px;
+}
+
+.content_test {
+    margin: 100px auto;
+    border: 1px solid;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 100%;
+    max-width: 1200px; /* 컨텐츠 영역 최대 너비 설정 */
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* 처음에는 숨겨진 상태 */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+    .content_test img{
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 0; /* 모바일에서는 로고를 중앙에 배치 */
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin-left: 10px;
+    }
+
+    /* 모바일에서 .current 링크의 text-underline-offset 값 줄이기 */
+    .navbar > ul > li.current > a {
+        text-underline-offset: 8px; /* 모바일에서는 8px로 줄임 */
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+    .content_test img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+        padding: 12px 0;
+    }
+
+    /* 더 작은 화면에서 .current 링크의 text-underline-offset 값 줄이기 */
+    .navbar > ul > li.current > a {
+        text-underline-offset: 6px; /* 더 작은 화면에서는 6px로 줄임 */
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .content_test{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 0px;
+    }
+
+    .content_test img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content_test p, .content_test span{
+        font-size: 15px !important;
+    }
+
+    
+
+    #noticeboard-div h1{
+        margin-bottom: 0px;
+    }
+}
