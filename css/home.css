@@ -237,13 +237,11 @@ header {
 #visualization-imgDiv {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
     /* 이미지 아래에 여백을 추가 */
-    border: 1px solid;
 }
 
 #data-acquisition-img,
@@ -251,7 +249,7 @@ header {
 #signal-img,
 #data-management-img,
 #visualization-img {
-    width: 150px;
+    width: 200px;
     height: auto;
 }
 
@@ -430,7 +428,7 @@ footer strong {
     #signal-img,
     #data-management-img,
     #visualization-img {
-        width: 150px;
+        width: 200px;
         height: auto;
     }
 
@@ -589,7 +587,7 @@ footer strong {
     #signal-img,
     #data-management-img,
     #visualization-img {
-        width: 100px;
+        width: 150px;
         height: auto;
     }
 
@@ -760,7 +758,7 @@ footer strong {
     #signal-img,
     #data-management-img,
     #visualization-img {
-        width: 50px;
+        width: 70px;
         height: auto;
     }
 
